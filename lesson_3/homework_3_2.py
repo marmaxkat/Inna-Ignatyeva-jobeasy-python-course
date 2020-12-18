@@ -10,7 +10,7 @@ import math
 number = int(input('Enter a number between 10 and 20: '))
 if 0 < number <= 7:
     result_1 = number * 10
-elif 7 < number <= 17:
+elif 7 < number <= 15:
     result_1 = math.floor(number / 3)
 elif 15 < number <= 20:
     result_1 = pow(number, 3)
@@ -34,10 +34,13 @@ if 0 < number_1 <= 5 and 0 < number_2 <= 5:
 elif 5 < number_1 <= 10:
         if 5 < number_2 <= 10:
             result_2 = (number_1 + number_2) * 3
-        elif number_2 <= 10:
+        elif number_2 > 10 or number_2 <5:
             result_2 = number_1 + number_2
-        else:
-            result_2 = 'Wrong value. Try again'
+elif 5 < number_2 <= 10:
+        if 5 < number_1 <= 10:
+            result_2 = (number_1 + number_2) * 3
+        elif number_1 > 10  or number_1 <5:
+            result_2 = number_1 + number_2
 else:
     result_2 = 'Wrong value. Try again'
 print(result_2)
@@ -70,5 +73,5 @@ else:
     if random_number == 0:
         result_4 = 'Even number'
     else:
-        result_4 ='Odd number'
+        result_4 = 'Odd number'
 print(result_4)

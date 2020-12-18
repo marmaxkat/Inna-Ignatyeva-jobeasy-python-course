@@ -57,10 +57,8 @@ elif age == 17:
     result_5 = 'You can learn to drive'
 elif age == 16:
     result_5 = 'You can buy a lottery ticket'
-elif age < 16:
-    result_5 = 'You can go Trick-or-Treating'
 else:
-    result_5 = None
+    result_5 = 'You can go Trick-or-Treating'
 print(result_5)
 
 print('______________')

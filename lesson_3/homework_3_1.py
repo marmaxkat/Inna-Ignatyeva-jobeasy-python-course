@@ -51,12 +51,14 @@ print('______________')
 # if you are under 16, save the message “You can go Trick-or-Treating” in result_5 variable.
 
 age = int(input('Enter your age: '))
-if age == 17:
+if age >= 18:
+    result_5 = 'You can vote'
+elif age == 17:
     result_5 = 'You can learn to drive'
 elif age == 16:
     result_5 = 'You can buy a lottery ticket'
 elif age < 16:
-    result_5 = 'YYou can go Trick-or-Treating'
+    result_5 = 'You can go Trick-or-Treating'
 else:
     result_5 = None
 print(result_5)

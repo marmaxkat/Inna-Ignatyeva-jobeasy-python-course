@@ -38,7 +38,7 @@ print('______________')
 # message “Incorrect answer” to result_4.
 
 number_2 = int(input('Enter a number between 10 and 20 (inclusive): '))
-if number_2 <= 20:
+if 10 < number_2 <= 20:
     result_4 = 'Thank you'
 else:
     result_4 = 'Incorrect answer'

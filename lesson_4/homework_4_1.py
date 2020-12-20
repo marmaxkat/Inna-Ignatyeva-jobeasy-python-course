@@ -59,6 +59,6 @@ print(result_8)
 print('______________')
 # Create a range of numbers from 0 to 10 (excluding 10) and save it to result_9 variable
 
-numbers = [3, 6, 8, 9, 1]
-result_9 = numbers[0:]
+range_1 = range(10)
+result_9 = str(range_1[0]) + str(range_1[1]) + str(range_1[2]) + str(range_1[3]) + str(range_1[4]) + str(range_1[5]) + str(range_1[6]) + str(range_1[7]) + str(range_1[8]) + str(range_1[9])
 print(result_9)

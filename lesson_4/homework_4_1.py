@@ -1,3 +1,38 @@
+# Save to variable result_1 the first character of string_1 variable. In result_2 save the last character
+# of string_1. Use indexes.
+
+string_1 = 'Python'
+result_1 = string_1[0]
+result_2 = string_1[-1]
+print(result_1 + ' ' + result_2)
+
+print('______________')
+# Save to variable result_3 string value from string_2 variable, written in reverse order, using concatenation.
+
+string_2 = 'Python'
+strring_len = len(string_2)
+result_3 = string_2[-1]
+i = -1
+while i > -strring_len:
+    i -= 1
+    result_3 += string_2[i]
+print(result_3)
+
+print('______________')
+# Slice string string_3 from 5th to 20th (excluding 20th) character and save the result to variable result_4
+
+string_3 = 'Python is a programming language that lets you work quickly and integrate systems more effectively'
+result_4 = string_3[4:20]
+print(result_4)
+
+print('______________')
+# Slice string string_4 from 10th character to the end of the string. Save only every second character to variable
+# result_5
+
+string_4 = 'Python is a programming language that lets you work quickly and integrate systems more effectively'
+result_5 = string_4[9:]
+print(result_5)
+
 print('______________')
 # Slice string string_5 from the first to the last character, save only every forth character and
 # save the result to variable result_6

@@ -25,7 +25,7 @@ result_2 = None
 # TODO: Here is your code
 name_2 = input('Enter your name: ')
 number_1 = input('Enter number: ')
-result_2 = ' '
+result_2 = ''
 for name_repeat_2 in range(int(number_1)):
     result_2 += name_2
 print(result_2)
@@ -40,14 +40,11 @@ result_3 = None
 
 # TODO: Here is your code
 string_number_1 = input('Enter a random digits: ')
-string_number_1_len = len(string_number_1)
 result_3 = 0
-i = 0
-for digit_number in range(string_number_1_len):
-    result_3 += int(string_number_1[i])
-    i += 1
-print(result_3)
 
+for char in string_number_1:
+    result_3 += int(char)
+print(result_3)
 
 # Ex. 4
 # Create code which sums up all even numbers between 2 and 100 (include 100) and save it in result_4 variable
@@ -55,12 +52,9 @@ print(result_3)
 result_4 = None
 
 # TODO: Here is your code
-range_1 = range(0,100,2)
-range_number = len(range_1)
-result_4 = range_1[0]
-i = 0
-for i in range(range_number):
-    result_4 += range_1[i]
-    print(f'{range_1[i]} - {result_4}')
-    i += 1
+
+result_4 = 0
+
+for number in range(2, 101, 2):
+    result_4 += number
 print(result_4)

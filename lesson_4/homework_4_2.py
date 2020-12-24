@@ -8,6 +8,11 @@ result_1 = None
 
 # TODO: Here is your code
 
+name_1 = input('Enter your name: ')
+result_1 = ''
+for name_repeat_1 in range(3):
+    result_1 += name_1
+print(result_1)
 
 # Ex. 2
 # Modify your previous program so that it will enter your name (save it in variable  name_2) and a number
@@ -18,6 +23,12 @@ number_1 = None
 result_2 = None
 
 # TODO: Here is your code
+name_2 = input('Enter your name: ')
+number_1 = input('Enter number: ')
+result_2 = ' '
+for name_repeat_2 in range(int(number_1)):
+    result_2 += name_2
+print(result_2)
 
 
 # Ex. 3
@@ -28,6 +39,14 @@ string_number_1 = None
 result_3 = None
 
 # TODO: Here is your code
+string_number_1 = input('Enter a random digits: ')
+string_number_1_len = len(string_number_1)
+result_3 = 0
+i = 0
+for digit_number in range(string_number_1_len):
+    result_3 += int(string_number_1[i])
+    i += 1
+print(result_3)
 
 
 # Ex. 4
@@ -36,3 +55,12 @@ result_3 = None
 result_4 = None
 
 # TODO: Here is your code
+range_1 = range(0,100,2)
+range_number = len(range_1)
+result_4 = range_1[0]
+i = 0
+for i in range(range_number):
+    result_4 += range_1[i]
+    print(f'{range_1[i]} - {result_4}')
+    i += 1
+print(result_4)

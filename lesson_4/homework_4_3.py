@@ -38,7 +38,6 @@ number_2 = input('Enter a random number: ')
 number_2_len = len(number_2)
 result_3 = ''
 i = 1
-print(number_2[-2])
 while i <= number_2_len:
     result_3 += number_2[-i]
     i += 1

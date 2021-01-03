@@ -32,7 +32,11 @@ print(reverse_list(list_2))
 # Create a list which contains only number items and save it to the list_3 variable. Then write multiply_list_items
 # function to multiply all the items in a list. Return result of multiplication
 
-list_3 = [1, 2, 3, 4, 5]
+import random
+list_3 = []
+
+for _ in range(10):
+    list_3.append(random.randint(1, 100))
 
 def multiply_list_items(array_3):
     len_list_3 = len(list_3)
@@ -84,7 +88,7 @@ list_6 = ['On', 'it', 'differed', 'repeated', 'wandered', 'required', 'in.', 'Th
 
 def longer_words_list(array_6, number1):
     new_list_6 = []
-    [new_list_6.append(elem) for elem in list_6 if len(elem) < number_1]
+    [new_list_6.append(elem) for elem in list_6 if len(elem) > number_1]
     return(new_list_6)
 
 print(longer_words_list(list_6, number_1))

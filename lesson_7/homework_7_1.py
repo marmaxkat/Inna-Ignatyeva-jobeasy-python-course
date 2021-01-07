@@ -4,10 +4,14 @@
 
 countries = ('USA', 'Canada', 'United Kingdom', 'Mexico', 'Brazil', 'Argentina', 'Chili', 'South Africa', 'Egypt',
              'Morocco', 'India', 'China', 'Ukraine', 'Spain', 'France', 'Russia')
-your_choice_country = 'Canada'
+your_choice_country = input('Enter a country: ')
 
 def find_index_by_value(value, tuple1):
-    pass
+    if value in tuple1:
+        return tuple1.index(your_choice_country)
+    return -1
+
+print(find_index_by_value(your_choice_country, countries))
 
 
 # Change the previous exercise. Enter a random number and save it to variable your_choice_number. Write
@@ -18,7 +22,11 @@ def find_index_by_value(value, tuple1):
 your_choice_number = 7
 
 def find_value_by_index(index, tuple1):
-    pass
+    if index < len(tuple1):
+        return tuple1[index]
+    return 'No such index'
+
+print(find_value_by_index(your_choice_number, countries))
 
 
 # Enter a pair of values in variables new_team_name, new_team_city. Then write add_your_own_team function
@@ -51,7 +59,10 @@ nhl_hockey_teams = {
 }
 
 def add_your_own_team(team_name, team_city):
-    pass
+   nhl_hockey_teams[new_team_name] = new_team_city
+   return nhl_hockey_teams
+
+print(add_your_own_team(new_team_name, new_team_city))
 
 
 # Create two dictionaries in dict_1, dict_2 variables. Write a join_dicts function to concatenate the following
@@ -67,10 +78,19 @@ def join_dicts(dict1, dict2):
 # # Enter a random number and save it to number_1 variable. Then write create_numbers_dict function to generate
 # a dictionary that contains items with keys from 1 to number_1 and values in format "x": "x**2".
 
-number_1 = None
+number_1 = int(input('Enter a random number: '))
+new_dict = {}
 
 def create_numbers_dict(number1):
-    pass
+    key = 1
+    while key <= number1:
+        vallue = key**2
+        new_dict[key]= vallue
+        key += 1
+    return new_dict
+
+print(create_numbers_dict(number_1))
+
 
 
 # Write sum_up_hockey_cups functions to sum all values in a dictionary dict_3.
@@ -99,8 +119,11 @@ dict_3 = {
 }
 
 def sum_up_hockey_cups(teams_dict, result = 0):
-    pass
-
+    val_sum = 0
+    for val in teams_dict.values():
+        val_sum += val
+    return val_sum
+print(sum_up_hockey_cups(dict_3))
 
 # Write remove_item_by_key function to remove a key True from dict_4 dictionary.
 
@@ -112,8 +135,10 @@ dict_4 = {
 }
 
 def remove_item_by_key(dict1):
-    pass
+    del dict1[True]
+    return dict1
 
+print(remove_item_by_key(dict_4))
 
 dict_5 = {
     "Cyprus": 1207359,
@@ -135,7 +160,11 @@ dict_5 = {
 }
 
 def find_min_max(dict1):
-    pass
+    values_all = dict1.values()
+    min_value = min(values_all)
+    max_value = max(values_all)
+    return 'min_value: ' + str(min_value) + '  min_value: ' + str(max_value)
+print(find_min_max(dict_5))
 
 
 # Write remove_duplicates functions to remove duplicates from dictionary dict_6.
@@ -153,5 +182,15 @@ dict_6 = {
     "Bailey": "labrador"
 }
 
+
 def remove_duplicates():
-    pass
+    temp = []
+    dict_res = dict()
+    for key, val in dict_6.items():
+        if val not in temp:
+            temp.append(val)
+            dict_res[key] = val
+
+    return dict_res
+
+print(remove_duplicates())
